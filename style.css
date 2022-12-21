@@ -61,13 +61,14 @@ body{
   height: 150px;
   background-attachment: fixed;
   border-radius: 20px;
-  padding: 10px;
+  padding: 25px;
   margin: 20px;
   cursor: pointer;
+  transition: box-shadow 225ms ease-in-out;
 }
 
 .pokemonCards:hover {
-  box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.21);
+  box-shadow: 2px -2px 12px rgba(0, 0, 0, 0.2);
 }
 
 .pokemonImg {
@@ -80,8 +81,8 @@ body{
   transition: transform 225ms ease-in-out;
 }
 
-.pokemonImgContainer img:hover {
-  transform: scale(1.2);
+.pokemonCards:hover .pokemonImgContainer img {
+  transform: scale(1.05);
 }
 
 #cardMenu {
@@ -95,12 +96,20 @@ body{
   width: 30px;
   height: 30px;
   margin: 5px;
-  transition: transform 0.1s;
+  transition: transform 0.225s;
 }
 
-.typeImg:hover {
-  transform: scale(1.1);
+.pokemonCards:hover .typeImg {
+  transform: scale(1.05);
 }
+
+.idNr{
+  transition: transform 0.225s;
+}
+.pokemonCards:hover .idNr {
+  transform: scale(1.05);
+}
+
 
 .pokemonTyps {
   display: flex;
@@ -140,8 +149,43 @@ body{
 }
 
 .card{
-  width: 350px !important;
+  width: 350px;
 }
+
+@media screen and (max-width: 750px){
+  .card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+  }
+
+  .card-img-top{
+   padding-top: 50px;
+    width: 60%;
+    height: auto;
+  }
+
+  .btn-close{
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .card-body{
+    width: 80%;
+  }
+}
+
 
 /*****************************************Pokemon mainTyp************************/
 .grass {
