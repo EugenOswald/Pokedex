@@ -2,7 +2,6 @@ let allPokemons = [];
 let searchArray = [];
 let allTypes = [];
 
-
 /**
  * Initializes the application by loading the first 60 Pokémon from the PokeAPI and rendering them.
  */
@@ -112,6 +111,7 @@ function searchPokemon() {
 		let name = allPokemons[i].name;
 		if (name.toLowerCase().includes(search)) {
 			document.getElementById("cardMenu").innerHTML += renderCardHTML(i);
+			renderPokemonTypes(i);
 		}
 	}
 }

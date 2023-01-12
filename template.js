@@ -47,41 +47,43 @@ function openPokemonInfosHTML(i) {
 	return /*html*/ `
 
     <div class="background">
-    
-        <div class="card px-3 py-3 ${mainTyp}" >
-        <button onclick="closePokemonInfos()" type="button" class="btn-close" aria-label="Close"></button>
-            <img src="${img}" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title capitalize">${name}</h5>
-                <div>
-                    <div>
-                        <Span><b>Weight</b> ${weight}g</Span>
-                    </div>
-                <span>Base HP</span>
-                        <div class="progress mt-2">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: ${hp}%">${hp}</div>
-                        </div>
-                        <span>Base Attack </span>
-                        <div class="progress mt-2">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: ${attack}%">${attack}</div>
-                        </div>
-                        <span>Base Defense</span>
-                        <div class="progress mt-2">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: ${defense}%"> ${defense}</div>
-                        </div>
-                        <span>Base Special Attack:</span>
-                        <div class="progress mt-2">
+
+        <div class="card">
+            <div class="${mainTyp}-linear-geadient card-top px-3 py-3">
+                <button onclick="closePokemonInfos()" type="button" class="btn-close" aria-label="Close"></button>
+                <img src="${img}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <span class="pokemon-id">${id}<span class="card-title capitalize">${name}</span></span>
                     
-                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: ${special_attack}%">${special_attack}</div>
-                        </div>
-                        <span>Base Special Defense</span>
-                        <div class="progress mt-2">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: ${special_defense}%"> ${special_defense}</div>
-                        </div>
-                        <span>Base Speed </span>
-                        <div class="progress mt-2">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: ${speed}%">${speed}</div>
-                    </div>
+                </div>
+            </div>
+            <div class="info-area">
+                <div>
+                    <Span><b>Weight</b> ${weight}g</Span>
+                </div>
+                <span>Base HP</span>
+                <div class="progress mt-2">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: ${hp}%">${hp}</div>
+                </div>
+                <span>Base Attack </span>
+                <div class="progress mt-2">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: ${attack}%">${attack}</div>
+                </div>
+                <span>Base Defense</span>
+                <div class="progress mt-2">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: ${defense}%"> ${defense}</div>
+                </div>
+                    <span>Base Special Attack:</span>
+                <div class="progress mt-2">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: ${special_attack}%">${special_attack}</div>
+                </div>
+                <span>Base Special Defense</span>
+                <div class="progress mt-2">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: ${special_defense}%"> ${special_defense}</div>
+                </div>
+                <span>Base Speed </span>
+                <div class="progress mt-2">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: ${speed}%">${speed}</div>
                 </div>
             </div>
         </div>
